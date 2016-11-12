@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typelevel in 2016 &mdash; Scala Days Berlin 2016</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+    body {
+      font-family: 'Lato';
+    }
+    h1, h2, h3 {
+      font-weight: normal;
+    }
+    .remark-code, .remark-inline-code {
+      font-family: 'DejaVu Sans Mono';
+    }
+
+    .remark-slide-content {
+      background-repeat: no-repeat !important;
+    }
+    .typelevel {
+      background: #0E2C3C;
+      color: white;
+      font-size: 180%;
+    }
+    .typelevel a {
+      color: white;
+      text-decoration: none;
+    }
+    .typelevel h1 {
+      text-align: center;
+    }
+    .what-logo {
+      background-size: contain;
+      background-position: center;
+    }
+    .centered {
+      margin-top: 15%;
+    }
+    .text-centered {
+      margin-left: 22%;
+    }
+    .projects-centered {
+      margin-top: 10%;
+    }
+    .projects-centered td {
+      text-align: center;
+      font-size: 80%;
+    }
+    .centeredimg {
+      margin-top: 4%;
+    }
+    .summit h1 {
+      text-shadow: rgba(255,255,255,.1) -1px -1px 1px, rgba(0,0,0,.5) 1px 1px 1px;
+    }
+    .hack-the-tower h2 {
+      margin-top: 40vh;
+    }
+    .sponsors {
+      background: white;
+    }
+    .sponsors img {
+      max-height: 7vh;
+    }
+    .cats {
+      background: white;
+    }
+    .cats img {
+      height: 60vh;
+    }
+    .title > h1 {
+      margin-top: -5%;
+      font-size: 200%;
+    }
+    .title > h2 {
+      font-size: 150%;
+    }
+    .title > h3  {
+      font-size: 100%;
+    }
+    .title img {
+      margin-bottom: -20%;
+      height: 5em;
+    }
+    .exclaim h1 {
+      font-size: 600%
+    }
+    ol {
+      margin: 0;
+      padding: 0;
+      line-height: 60px;
+      list-style-type: none;
+    }
+    ul > li {
+      margin: 3% 0 3% 0;
+      padding: 0;
+    }
+    blockquote {
+      font-size: 200%;
+    }
+    .wide {
+      margin: 0;
+      padding: 0;
+    }
+    .hero {
+      background-image: url(img/hero-left-overlay-white.svg);
+      webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="source">
+    name: inverse
+    layout: true
+    class: typelevel
+    ---
+    class: center, middle, hero
+
+    .title[
+      # Typelevel in 2016
+
+      ## Miles Sabin, [@milessabin](http://twitter.com/milessabin)
+
+      [![Typelevel logo](img/logo.svg)](http://typelevel.org)
+    ]
+
+    ---
+    class: center, middle
+
+    # What is Typelevel?
+
+    ---
+    # Typelevel is ...
+
+    Typelevel is a community of projects and people organized around ...
+
+    * Pure, typeful, functional programming in Scala
+
+    * Independent, free/libre and open source software
+
+    * A desire to share ideas and code
+
+    * Accessible and idiomatic learning resources
+
+    * An inclusive, welcoming and safe environment
+
+    ---
+    class: center, middle
+
+    # Remove the barriers to functional programming in Scala
+
+    ---
+    class: center
+
+    # Typelevel is ...
+
+    .centered[
+      # http://typelevel.org
+      # http://github.com/typelevel/general
+      # http://gitter.im/typelevel/general
+    ]
+
+    ---
+    class: center
+
+    # Typelevel is ...
+
+    .centered[
+      ## a community of projects ...
+    ]
+
+    ---
+    # a community of projects ...
+
+    .projects-centered[
+      <table>
+        <tr>
+          <td>Cats</td>
+          <td>spire</td>
+          <td>algebra</td>
+          <td>Alleycats</td>
+          <td>Dogs</td>
+        </tr>
+        <tr>
+          <td>shapeless</td>
+          <td>Kittens</td>
+          <td>refined</td>
+          <td>scodec</td>
+          <td>delta</td>
+        </tr>
+        <tr>
+          <td>doobie</td>
+          <td>Monocle</td>
+          <td>Matryoshka</td>
+          <td>eff-cats</td>
+          <td>Mouse</td>
+        </tr>
+        <tr>
+          <td>circe</td>
+          <td>Finch</td>
+          <td>Monix</td>
+          <td>http4s</td>
+          <td>Frameless</td>
+        </tr>
+        <tr>
+          <td>ENSIME</td>
+          <td>tut</td>
+          <td>Scala Exercises</td>
+          <td>catalysts</td>
+          <td>structures</td>
+        </tr>
+        <tr>
+          <td>ScalaCheck</td>
+          <td>ScalaCheck-shapeless</td>
+          <td>Specs2</td>
+          <td>discipline</td>
+          <td>Scoverage</td>
+        </tr>
+        <tr>
+          <td>simulacrum</td>
+          <td>machinist</td>
+          <td>export-hook</td>
+          <td>imp</td>
+          <td>kind-projector</td>
+        </tr>
+        <tr>
+          <td>local-implicits</td>
+          <td>Squants</td>
+          <td>shapeless-contrib</td>
+          <td>argonaut-shapeless</td>
+          <td>spray-json-shapeless</td>
+        </tr>
+      </table>
+    ]
+
+    ---
+    class: center
+
+    # a community of projects ...
+
+    .centered[
+      ## What about Typelevel Scala?
+    ]
+
+    ---
+    class: center
+
+    # Typelevel is ...
+
+    .centered[
+      ## a community of projects ...
+    ]
+    
+    --
+    ## ... and people ...
+
+    ---
+    class: center, summit
+    background-image: url(img/philly-summit.jpg)
+
+    # Typelevel Summit Philadelphia
+    ---
+    class: center, summit
+    background-image: url(img/oslo-summit.jpg)
+
+    # Typelevel Summit Oslo
+    ---
+    class: center, summit
+    background-image: url(img/hack-the-tower.jpg)
+
+    # Typelevel @HackTheTower
+
+    ---
+    class: center, middle, sponsors
+
+    ![](img/47_degrees.png)
+    ![](img/arktekk.png)
+    ![](img/box.png)
+    ![](img/commbank.png)
+    ![](img/comcast.png)
+    ![](img/lightbend.png)
+    ![](img/mediamath.png)
+    ![](img/scotiabank.png)
+    ![](img/underscore.png)
+    ![](img/verizon.png)
+
+    ---
+    # Unconferences, hack days ...
+
+    * Scala World, Lake District, UK, 10-14 Sept
+
+    * Scala.IO, Lyons, France, 27-28 Oct
+
+    * Lambda World, Cadiz, Spain, Sept 30/Oct 1
+
+    * Scala eXchange, London, UK, 8-9 Dec
+
+    --
+    * NEScala, flatMap Oslo 2017 ... planning
+
+    --
+
+    .text-centered[We want to organize more ... get in touch!]
+
+    ---
+    class: middle, center
+
+    # What is _Typelevel_?
+
+    ---
+    class: center, middle
+
+    # What is Typelevel _Scala_?
+
+    ---
+    # Typelevel Scala
+
+    --
+    * Fork of Scala initiated at the end of 2014
+    
+    --
+    * Aim to address issues of particular concern for the Typelevel style
+
+    --
+    * Stalled at the beginning of 2015
+
+    --
+    * Plugins, macros and other workarounds filled some of the gaps
+
+    --
+    * Fundamental issues remained ...
+
+    ---
+    class: center
+
+    # Background
+
+    .centeredimg[
+      ![SI-2712 or bust](img/resolution.png)
+    ]
+    ---
+    class: center
+
+    # Typelevel Scala
+
+    .centeredimg[
+      ![SI-2712 or bust](img/hopes-up.png)
+    ]
+    ---
+    class: center
+
+    # Typelevel Scala
+
+    .centeredimg[
+      ![SI-2712 or bust](img/merged.png)
+    ]
+    ---
+    class: middle
+
+    ```text
+    @milessabin:
+    The really depressing thing is, looking at the patch, we
+    could have fixed this years ago.
+
+    @runarorama:
+    Yeah. I remember seeing Paul's comment on this and thinking
+    "that's reasonable, somebody should try it"
+
+    @milessabin:
+    Ditto, but nobody did.
+
+    @runarorama:
+    :-(
+    ```
+
+    ---
+    # Initial prospects
+
+    Typelevel Scala agenda (Scala Days Berlin) ...
+    
+    * 42.type (aka SIP-23)
+
+    * Multiple implicit parameter blocks
+
+    * Partial type application
+
+    * Improved compile times for inductive implicits
+
+    * Implicit prioritization
+
+    * Core Scala
+
+    ---
+    # Early progress
+
+    Typelevel Scala agenda (Scala Days Berlin) ...
+    
+    * 42.type (aka SIP-23) &mdash; done
+
+    * Multiple implicit parameter blocks &mdash; on hold
+
+    * Partial type application
+
+    * Improved compile times for inductive implicits &mdash; in progress
+
+    * Implicit prioritization
+
+    * Core Scala
+
+    ---
+    class: center, middle
+
+    # Great, but can I use it?
+
+    ---
+    class: center, middle
+
+    # Great, but can I use it _now_?
+
+    ---
+    # Constraints
+
+    To be able (and willing) to use Typelevel Scala _now_ ...
+
+    --
+    * We need releases compatible with the existing ecosystem
+
+    --
+    * The benefits must be significant
+
+    --
+    * The disruption must be minimal
+
+    --
+    * The risks should be very low
+
+    ---
+    # Policy &mdash; Goals
+
+    Typelevel Scala (TLS) releases ...
+
+    --
+    * Track Lightbend Scala (LBS) releases
+
+    --
+    * Generate code which is binary compatible with LBS, allowing ...
+
+    --
+    * TLS binaries to be linked with LBS binaries and vice versa
+
+    ---
+    # Policy &mdash; Rules
+
+    Every fix or feature included in a Typelevel Scala release ...
+
+    --
+    * Must be submitted as a PR against Lightbend Scala _first_.
+
+    --
+    * Must have a reasonable likelihood of being merged in LBS
+
+    --
+    * Must offer a significant fix or feature
+
+      &mdash; for which there is no reasonable workaround
+
+    --
+    * Must be binary compatible with LBS
+    
+      &mdash; unless a binary change is the motivation
+
+    ---
+    # Policy &mdash; Results
+
+    We have our first releases of Typelevel Scala! ...
+
+    * Relative to Lightbend Scala 2.11.8
+
+    * Includes ...
+      * Fix for SI-2712
+      * Fix for SI-7046
+      * Literal types
+      * Minor GADT fixes
+
+    ---
+    # Policy &mdash; Results
+
+    We have our first releases of Typelevel Scala! ...
+
+    * Relative to Lightbend Scala 2.12.0 ...
+
+    * Includes ...
+      * Fix for SI-7046
+      * Literal types
+
+    --
+    * Already merged in Lightbend 2.12.0 ...
+      * Fix for SI-2712
+      * Minor GADT fixes
+
+    ---
+    # Policy &mdash; Results
+
+    * SI-2712 and GADT fixes merged in LBS 2.12.0
+
+    * Literal types and SI-7046 fix under consideration for 2.12.1
+
+    * PRs for backports of all the above queued for 2.11.9
+
+    ---
+    # Policy &mdash; Results
+
+    * SI-2712 and GADT fixes merged in LBS 2.12.0
+
+    * Literal types and SI-7046 fix under consideration for 2.12.1
+
+    * ~~PRs for backports of all the above queued for 2.11.9~~
+
+    ---
+    # Policy &mdash; Results
+
+    * SI-2712 and GADT fixes merged in LBS 2.12.0
+
+    * Literal types and SI-7046 fix under consideration for 2.12.1
+
+    * SI-2712, SI-7046 and GADT fixes merged in LBS for 2.11.9!
+
+    ---
+    class: center, middle
+
+    # Risky to use it?
+
+    ---
+    class: center, middle
+
+    # Risky not to use it!
+
+    ---
+    class: center, middle
+
+    # Great! So _how_ do I use it?
+
+    ---
+    # How to use Typelevel Scala
+
+    Using it in your existing projects can be as simple as,
+
+    ```
+    scalaOrganization := "org.typelevel"
+
+    ```
+
+    --
+    Assumes,
+
+    --
+    * You are using Lightbend Scala 2.11.8 or 2.12.0
+
+    --
+    * You are using SBT 0.13.13 or later
+
+    --
+
+    Full details at https://github.com/typelevel/scala
+
+    ---
+    class: center, middle
+
+    # SI-2712
+
+    ---
+    class: center, middle
+
+    # SI-7046
+
+    ---
+    class: center, middle
+
+    # Literal types
+
+    ---
+    class: center, middle
+
+    # Inductive implicits
+
+    ---
+    # Current Roadmap
+
+    * Improved compile time for inductive implicits
+
+    * Partial type application, multiple implicit parameter blocks
+
+    * Implicit prioritization
+
+    * Singleton type and dependent method type fixes
+
+    * More GADT fixes
+
+    * Alternative Predef
+    
+    ---
+    class: center, middle
+
+    # Questions?
+
+    ---
+    class: center, middle, hero
+
+    .title[
+      # Thank You
+      ## Miles Sabin, [@milessabin](http://twitter.com/milessabin)
+      ### http://typelevel.org/
+
+      [![Typelevel logo](img/logo.svg)](http://typelevel.org)
+    ]
+
+  </textarea>
+  <!--
+    There's a copy of this JS included in the cached folder,
+    to give yourself a chance if you have no internets /o\
+  -->
+  <script src="cache/remark-latest.min.js">
+  </script>
+  <script>
+    var slideshow = remark.create({
+      //ratio: '4:3',
+      ratio: '16:9',
+
+
+      slideNumberFormat: '',
+      // Or you might like the page number bottom right:
+      // slideNumberFormat: '%current%',
+
+      // Default: use ```sql ..``` etc to override
+      highlightLanguage: 'scala',
+
+      // Plausible style for blue background:
+      highlightStyle: 'github',
+
+      // These also look reasonable:
+      //highlightStyle: 'default',
+      //highlightStyle: 'ascetic',
+      //highlightStyle: 'vs',
+
+      //Good styles, but don't really work with a blue background:
+      //highlightStyle: 'ir_black',
+      //highlightStyle: 'dark',
+
+      });
+  </script>
+</body>
+</html>
